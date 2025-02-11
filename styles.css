@@ -1,181 +1,165 @@
-  @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap');
-
-*{
+* {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
     color: white;
 }
-.top{
-    background: rgba(0,0,0,0.2)url("assets/Title-Image.png");
+
+.top {
+    background: rgba(0, 0, 0, 0.5) url("assets/Title-Image.png");
+    background-size: cover;
+    background-position: center;
     background-blend-mode: darken;
-      
-}
-section{
-    height: "337px";
-    width: "599px";
-}
-nav{
-    height: 100px;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-nav ul{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.nav-bar{
-    display: flex;
-}
-.logo{
-    width: 15%;
-    margin: 30px;
-}
-nav ul li{
-    margin: 10px;    
-}
-.menu{
-    margin: 18px;
-}
-.menu li{
-    margin: 15px;
-}
-.title .name{
-    font-size: 100px;
-    font-weight: 300;    
-}
-.play-btn{
-    margin: 20px 20px;
-    display: flex;
-    padding: 4px 13px;
-    align-items: center;
-    border: 1px solid white;
-    border-radius: 5px;
-}
-.play-btn p{
-    margin: 5px;
-    color: black;
-    font-size: 15px;
-}
-.info-btn{
-    margin: 20px 20px;
-    display: flex;
-    padding: 4px 13px;
-    align-items: center;
-    border: 0px solid white;
-    border-radius: 5px;
-    background-color: rgba(250,250,250,0.5);
-}
-.info-btn p{
-    margin: 5px;
-    color: white;
-    font-size: 15px;
-    
-}
-.name-buttons{
-    display: flex;
-}
-.title{
-    margin-left: 46px;
-    margin-top: 198px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: left;
+    justify-content: space-between;
 }
-.show{
-    display: flex;
-    align-items: end;
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
 }
-.show img{
-    margin: 8px;
-}
-.show p{
-    margin: 10px;
-    letter-spacing: 5px;
-}
-.See-again-head{
+
+.nav-bar {
     display: flex;
     align-items: center;
 }
-.middle{
-    background-color: rgb(20,20,20);
-}
-.images{
+
+.nav-bar ul {
+    list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
 }
-.images img{
-    width: 210px;
-    margin-left: 20px;
+
+.nav-bar ul li {
+    margin: 10px;
+    cursor: pointer;
 }
-.top .footer{
-    margin-top: 100px;
-    margin-left: 46px;
+
+.logo {
+    width: 120px;
 }
-.foot-bottom{
+
+.play-btn, .info-btn {
     display: flex;
-    justify-content: space-between;
-}.foot-bottom img{
-    margin: 20px 20px;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
 }
-#top10{
-    position: relative;
-    left: 255px;
-    top: 50px;
+
+.play-btn {
+    background-color: white;
+    color: black;
 }
-.topTen .images img{
-    height: 146px;
-    width: 100px;
+
+.info-btn {
+    background-color: rgba(255, 255, 255, 0.3);
 }
-.topTen .rank{
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.images img {
+    width: 100%;
+    max-width: 210px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: rgb(20, 20, 20);
+    padding: 20px;
+}
+
+.socials {
     display: flex;
     justify-content: center;
-    margin: 10px;
+    gap: 15px;
 }
-footer{
-    background-color: rgb(20,20,20);
-    padding: 20px 20px;
-}
-.socials{
+
+.artists {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
-.socials img{
-    margin: 10px;
-}
-.bottom{
-    width: 70%;
-    margin: auto;
-}
-.artists ul li{
-    color: rgb(128,128,128);
+
+.artists ul {
     list-style: none;
-    margin: 20px 8px;
+    padding: 0;
 }
-.artists{
-    display: flex;
+
+.highlight, .copyright {
+    text-align: center;
+    color: rgb(128, 128, 128);
+}
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
     justify-content: space-between;
+    width: 30px;
+    height: 21px;
 }
-.highlight{
-    color: rgb(128,128,128);
-    border: 2px solid rgb(128,128,128);
-    padding: 10px 10px;
-    max-width: fit-content;
-    margin: 20px 8px;
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
 }
-.copyright{
-    color: rgb(128,128,128);
-    margin: 20px 8px;
-}
-.heading{
-    display: flex;
-    margin-top: 25px;
-    margin-left: 46px;
-    align-items: center;
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-bar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-bar ul li {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .title {
+        text-align: center;
+        margin: auto;
+    }
+
+    .title .name {
+        font-size: 3rem;
+    }
+
+    .name-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .artists {
+        flex-direction: column;
+        align-items: center;
+    }
 }
